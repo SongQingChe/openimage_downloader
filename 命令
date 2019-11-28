@@ -1,0 +1,6 @@
+python main.py downloader --Dataset dogandcat -y --classes Dog Cat --type_csv all --sub m --image_IsOccluded 1 --image_IsTruncated 0 --image_IsGroupOf 1 --image_IsDepiction 0 && 
+python main.py downloader --Dataset dogandcat -y --classes Dog Cat --type_csv all --sub m --image_IsOccluded 0 --image_IsTruncated 0 --image_IsGroupOf 0 --image_IsDepiction 0
+
+python main.py downloader --Dataset person -y --classes Person --type_csv train --sub m --image_IsOccluded 0 --image_IsTruncated 0 --image_IsGroupOf 0 --image_IsDepiction 0 --limit 5000
+
+python main.py downloader --Dataset car_norm -y --classes Car --type_csv train --image_IsOccluded 0 --image_IsTruncated 0 --image_IsGroupOf 0 --image_IsDepiction 0 --image_IsInside 0
