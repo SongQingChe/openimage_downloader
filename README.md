@@ -1,4 +1,5 @@
 <h1 align="center"> ~ OIDv4 ToolKit ~ </h1>
+This code is from https://github.com/EscVM/OIDv4_ToolKit, I modified it to fix some bugs and extend some functions. Appreciate original author's code. 
 
 Do you want to build your personal object detector but you don't have enough images to train your model? Do you want to train your personal image classifier, but you are tired of the deadly slowness of ImageNet? Have you already discovered [Open Images Dataset v4](https://storage.googleapis.com/openimages/web/index.html) that has [600](https://storage.googleapis.com/openimages/2018_04/bbox_labels_600_hierarchy_visualizer/circle.html) classes and more than 1,700,000 images with related bounding boxes ready to use? Do you want to exploit it for your projects but you don't want to download gigabytes and gigabytes of data!?
 
@@ -95,7 +96,7 @@ Example: `Polar_bear`.
 Let's for example download Apples and Oranges from the validation set. In this case we have to use the following command.
   ```bash
    python3 main.py downloader --classes Apple Orange --type_csv validation
-   ```
+  ```
 The algorith will take care to download all the necessary files and build the directory structure like this:
 
 ```
@@ -152,7 +153,7 @@ This option allows to download more classes, but in a common folder. Also the re
 Again if we want to download Apple and Oranges, but in a common folder
   ```bash
    python3 main.py downloader --classes Apple Orange --type_csv validation --multiclasses 1
-   ```
+  ```
 
 ### Annotations
 
@@ -185,7 +186,7 @@ Naturally, the ToolKit provides the same options as paramenters in order to filt
 For example, with:
   ```bash
    python3 main.py downloader -y --classes Apple Orange --type_csv validation --image_IsGroupOf 0
-   ```
+  ```
 only images without group annotations are downloaded.
 
 # 3.0 Download images from Image-Level Labels Dataset for Image Classifiction
@@ -220,12 +221,12 @@ R = required, O = optional
 The ToolKit is useful also for visualize the downloaded images with the respective labels.
 ```bash
    python3 main.py visualizer
-   ```
+```
   In this way the default `Dataset` folder will be pointed to search the images and labels automatically. To point
   another folder it's possible to use `--Dataset` optional argument.
 ```bash
    python3 main.py visualizer --Dataset desired_folder
-   ```
+```
 Then the system will ask you which folder to visualize (train, validation or test) and the desired class.
 Hence with `d` (next), `a` (previous) and `q` (exit) you will be able to explore all the images. Follow the menu for all the other options.
 
